@@ -1,0 +1,73 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+body {
+    background-color: rgb(40, 40, 40);
+}
+
+.title {
+    color: white !important;
+    text-align: center;
+    font-size: 90px !important;
+    margin-bottom: 2%;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+#main-content {
+    color: white;
+    border: 2px solid white;
+    padding-top: 2%;
+}
+
+#datas_about_current_crypto {
+    color: white;
+    border: 2px solid gray !important;
+    border-radius: 20px;
+    height: 90px;
+    padding: 0.25% 0.25% 0.25% 0.25%;
+    margin: 0.25% 20%;
+}
+
+.current_crypto_pictures {
+    color: white;
+    height: 100%;
+    width: 10%;
+    float: left;
+}
+
+.pictures {
+    width: 80px;
+    text-align: center;
+    padding: 4%;
+    padding-left: 15%;
+}
+
+.current_crypto_name {
+    color: white;;
+    height: 80%;
+    width: 65%;
+    float: left;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 1.5%;
+}
+
+
+.current_crypto_balance {
+    color: white;
+    height: 100%;
+    width: 20%;
+    float: left;
+    font-size: 40px;
+    padding-top: 0%;
+    text-align: right;
+}
+
+.p-center {
+    padding-top: 10%;
+    color: lightgreen;
+}

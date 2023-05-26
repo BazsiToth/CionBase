@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="btc-price">0</p>
+    <script>
+        const pricesWsbit = new WebSocket('wss://ws.coincap.io/prices?assets=bitcoin')
+        const Tag = document.getElementById('btc-price')
+
+        pricesWsbit.onmessage = function (msg) {
+            const price = JSON.parse(msg.data).bitcoin;
+            Tag.textContent = price + "$"
+        }
+    </script>
+</body>
+</html>

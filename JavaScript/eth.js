@@ -6,7 +6,7 @@ coinprice.onmessage = (evt) => {
     let stockObject = JSON.parse(evt.data);
     let price = parseFloat(stockObject.ethereum).toFixed(2);
     stockPriceElementEth.innerText = price + ' $';
-    stockPriceElementEth.style.color = lastPriceEth === null || lastPriceEth === price ? 'black': price > lastPriceEth ? 'lightgreen' : 'red';
+    stockPriceElementEth.style.color = lastPriceEth === null || lastPriceEth === price ? 'white': price > lastPriceEth ? 'lightgreen' : 'red';
     lastPriceEth = price;
 };
 

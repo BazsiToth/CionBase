@@ -6,7 +6,7 @@ ws.onmessage = (evt) => {
     let stockObject = JSON.parse(evt.data);
     let price = parseFloat(stockObject.bitcoin).toFixed(2);
     stockPriceElement.innerText = price + ' $';
-    stockPriceElement.style.color = lastPrice === null || lastPrice === price ? 'black': price > lastPrice ? 'lightgreen' : 'red';
+    stockPriceElement.style.color = lastPrice === null || lastPrice === price ? 'white': price > lastPrice ? 'lightgreen' : 'red';
     lastPrice = price;
 };
 

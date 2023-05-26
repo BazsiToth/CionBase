@@ -7,15 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="btc-price">0</p>
-    <script>
-        const pricesWsbit = new WebSocket('wss://ws.coincap.io/prices?assets=bitcoin')
-        const Tag = document.getElementById('btc-price')
-
-        pricesWsbit.onmessage = function (msg) {
-            const price = JSON.parse(msg.data).bitcoin;
-            Tag.textContent = price + "$"
-        }
-    </script>
+    <p id="stock-price">0</p>
+    <script src="a.js"></script>
 </body>
 </html>

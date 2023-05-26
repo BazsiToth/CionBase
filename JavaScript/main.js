@@ -14,10 +14,11 @@ pricesWsethereum.onmessage = function (msg) {
     Tagethereum.textContent = price + " $"
 }
 
-const pricesWsRipple = new WebSocket('wss://ws.coincap.io/prices?assets=ripple')
-const TagRipple = document.getElementById('tet-price')
+const pricesWsripple = new WebSocket('wss://ws.coincap.io/prices?assets=litecoin')
+const Tagripple = document.getElementById('ripple-price')
 
-pricesWsRipple.onmessage = function (msg) {
-    const price = JSON.parse(msg.data).ripple;
-    TagRipple.textContent = price + " $"
+pricesWsripple.onmessage = function (msg) {
+    const price = JSON.parse(msg.data).litecoin;
+    Tagripple.textContent = price + " $"
+    console.log(price)
 }

@@ -6,7 +6,7 @@ Litecoin.onmessage = (evt) => {
     let stockObject = JSON.parse(evt.data);
     let price = parseFloat(stockObject.litecoin).toFixed(2);
     stockPriceElementLitecoin.innerText = price + ' $';
-    stockPriceElementLitecoin.style.color = lastPriceLitecoin === null || lastPriceLitecoin === price ? 'black': price > lastPriceLitecoin ? 'lightgreen' : 'red';
+    stockPriceElementLitecoin.style.color = lastPriceLitecoin === null || lastPriceLitecoin === price ? 'white': price > lastPriceLitecoin ? 'lightgreen' : 'red';
     lastPriceLitecoin = price;
 };
 

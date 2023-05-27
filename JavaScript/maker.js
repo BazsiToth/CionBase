@@ -8,7 +8,6 @@ Maker.onmessage = (evt) => {
     stockPriceElementMaker.innerText = price + ' $';
     stockPriceElementMaker.style.color = lastPriceMaker === null || lastPriceMaker === price ? 'white': price > lastPriceMaker ? 'lightgreen' : 'red';
     lastPriceMaker = price;
-    console.log(stockPriceElementMaker);
 };
 
 Maker.onerror = (evt) => {

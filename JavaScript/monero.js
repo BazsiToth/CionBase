@@ -8,7 +8,6 @@ coinPriceTether.onmessage = (evt) => {
     stockPriceElementTether.innerText = price + ' $';
     stockPriceElementTether.style.color = lastPriceTether === null || lastPriceTether === price ? 'white': price > lastPriceTether ? 'lightgreen' : 'red';
     lastPriceTether = price;
-    console.log(stockPriceElementTether);
 };
 
 coinPriceTether.onerror = (evt) => {

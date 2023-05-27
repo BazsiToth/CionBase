@@ -1,10 +1,10 @@
-let ws = new WebSocket('wss://ws.coincap.io/prices?assets=bitcoin'); 
-let stockPriceElement = document.getElementById('bitcoin-price');
+let gnosis = new WebSocket('wss://ws.coincap.io/prices?assets=gnosis'); 
+let stockPriceElement = document.getElementById('gnosis-price');
 let lastPrice = null;
 
-ws.onmessage = (evt) => {
+gnosis.onmessage = (evt) => {
     let stockObject = JSON.parse(evt.data);
-    let price = parseFloat(stockObject.bitcoin).toFixed(2);
+    let price = parseFloat(stockObject.gnosis).toFixed(2);
     stockPriceElement.innerText = price + ' $';
     stockPriceElement.style.color = lastPrice === null || lastPrice === price ? 'white': price > lastPrice ? 'lightgreen' : 'red';
     lastPrice = price;

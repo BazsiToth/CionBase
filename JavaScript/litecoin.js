@@ -8,7 +8,6 @@ Litecoin.onmessage = (evt) => {
     stockPriceElementLitecoin.innerText = price + ' $';
     stockPriceElementLitecoin.style.color = lastPriceLitecoin === null || lastPriceLitecoin === price ? 'black': price > lastPriceLitecoin ? 'lightgreen' : 'red';
     lastPriceLitecoin = price;
-    console.log(stockPriceElementLitecoin);
 };
 
 Litecoin.onerror = (evt) => {
